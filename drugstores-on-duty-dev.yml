@@ -1,0 +1,21 @@
+# HYSTRIX HABIILITADO
+env.drugstores.feign.hystrix.enabled: true
+# LOGS
+env.drugstores.logging.level.root: INFO
+env.drugstores.logging.level.service: DEBUG
+env.drugstores.feign.logging.level: BASIC
+# TIMEOUTS
+env.drugstores.hystrix.base-timeout: 5000
+env.drugstores.feign.drugstores-on-duty.connect-timeout: 5000
+env.drugstores.feign.drugstores-on-duty.read-timeout: 5000
+env.drugstores.feign.admin-divisions.connect-timeout: 5000
+env.drugstores.feign.admin-divisions.read-timeout: 5000
+# URLS Y PATHS
+env.admin-division.base-url: https://midastest.minsal.cl
+env.admin-division.regions-path: /farmacias/maps/index.php/utilidades/maps_obtener_regiones
+env.admin-division.communes-path: /farmacias/maps/index.php/utilidades/maps_obtener_comunas_por_regiones
+env.drugstores-on-duty.base-url: https://farmanet.minsal.cl
+env.drugstores-on-duty.drugstores-by-region-path: /maps/index.php/ws/getLocalesRegion
+env.drugstores-on-duty.drugstores-on-duty-path: /maps/index.php/ws/getLocalesTurnos
+# REGION POR DEFECTO [METROPOLITANA]
+env.drugstores.default-region: 7
